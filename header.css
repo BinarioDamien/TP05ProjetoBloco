@@ -1,9 +1,10 @@
 nav {
   display: flex;
   justify-content: flex-end;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-color: #ccc;
   height: 40px;
-  align-items: center;
+  align-items: center;  
 }
 nav ul {
   display: flex;
@@ -11,6 +12,11 @@ nav ul {
 
 nav ul li {
   margin: 0px 10px;
+  text-transform: uppercase;
+}
+nav ul li a {
+  text-decoration: none;
+  color: blue;
 }
 
 .header-middle {
@@ -26,7 +32,7 @@ nav ul li {
   background-repeat: no-repeat;
   margin-left: 30px;
 }
-.searchForm {
+.search-form {
   width: 30%;
   height: 40px;
   border: 1px solid #ccc;
@@ -34,28 +40,30 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+  overflow: hidden;  
 }
-.searchForm input {
+.search-form:focus-within{
+  border-color: #001d53;
+}
+.search-form input {
  box-sizing: border-box;
  margin-left: 10px;
  height: 80%;
  border: none;
  flex-grow: 1; 
 }
-.searchForm input:focus{
+.search-form input:focus{
   outline: none;  
 }
-.searchForm button{
+.search-form button{
   border: none;
   background-color: transparent;
   border-left: 1px solid #ccc;
 }
-.searchForm i {  
+.search-form i {  
   font-size: 1.5rem;
   color: rgb(95, 95, 95);
 }
-
 
 .loginArea ul {
   display: flex;
