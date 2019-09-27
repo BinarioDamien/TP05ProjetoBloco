@@ -1,7 +1,7 @@
 .logoImage {
   width: 150px;
   height: 150px;
-  background-image: url('/img/example-logo-2.png');
+  background-image: url('./img/example-logo-2.png');
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -43,81 +43,114 @@ nav ul li {
   height: 50px;
   margin-right: 50px;
   background-color: red;
-  background-image: url('/img/shopcarticon.jpg');
+  background-image: url('./img/shopcarticon.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
+/*Rodrigo Main*/
+
 .container {
   box-sizing: border-box;
-  width: 100vw;
-  margin: 0 auto;
+  width: 100%;  
 }
 main {
-  display: grid;
-  grid-template-areas: 'side principal';
-  justify-content: center;
-  column-gap: 1vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "side principal";
+	grid-template-columns: 1fr 3fr;
+	width: 80%;
+	gap: 20px;
+	align-items: flex-start;
+	box-sizing: border-box;
 }
 .side {
-  grid: side;
-  border: 1px solid red;
-  width: 240px;
-  height: 100vh;
+	grid: side;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+	box-sizing: border-box; 
+}
+.side div{
+	border: 1px solid #ccc;
+	width: 100%;
+	height: 100px;	
+	margin: 0 0 2px 0;	
+	box-sizing: border-box;
+
+}
+.side div p{
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	padding: 45px 50px;	
 }
 .principal {
-  grid: principal;
-  display: grid;
-  grid-template-areas: 'content' 'textmain' 'figura';
-  grid-template-rows: 350px 500px 300px;
-  justify-content: center;
-  border: 1px solid green;
-  width: 800px;
-  height: 100vh;
+	border: 1px solid #ccc;
+	grid: principal;
+	display: grid;
+	grid-template-areas: "topArea" "midArea" "bottomArea";
+	gap: 15px;
+	margin-bottom: 5px;
+	padding: 10px;
+	box-sizing: border-box;
 }
-.mainContent {
-  grid: content;
-  display: grid;
-  grid-template-areas: 'p p p p';
-  grid-template-columns: 190px 190px 190px 190px;
-  margin: 0 5px;
-}
-.content {
-  border: 1px solid yellow;
-  height: 150px;
-  font-size: 10em;
-  text-align: center;
-}
-.infoContent {
-  grid: p;
-  height: 100px;
-  border: 1px solid yellow;
-  text-align: center;
-  padding-top: 20px;
+.principal h1{
+  font-size: 2.4em; 
   margin: 10px 0;
 }
-.textAbout {
-  grid: textmain;
-}
-.textAbout p {
-  width: 100%;
-  height: 200px;
-  border: 1px solid blue;
-}
-.imgMain {
-  grid: figura;
-  width: 780px;
-}
-.container {
+.topArea{
+  grid: topArea;
+  display: flex;
+  justify-content: space-between;
+	width: 100%;
+	height: 310px;
+  border: 1px solid #ccc;
+  padding:5px;
+	position: relative;
   box-sizing: border-box;
-  width: 100vw;
-  margin: 0 auto;
 }
-main {
-  display: grid;
-  grid-template-areas: 'side principal';
-  justify-content: center;
-  column-gap: 1vw;
+.mainAreaContent{
+  width: 220px;
+  height: 300px;
+  box-sizing: border-box;
+}
+.imgContent{
+  width: 220px;
+  height: 220px;
+  background-image: url('./img/img_banner_prototipo.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+.infoContent{
+  width: 220px;
+  height: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding-top:10px;
+  background-color: #ccc;
+  box-sizing: border-box;
+}
+.midArea{
+	grid: midArea;
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.bottomArea{
+	grid: midArea;
+	width: 100%;
+	height: 200px;
+	box-sizing: border-box; 
+  background-color: #ccc;
+  background: url('./img/img_prototipo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
 }
 
 /*michel footer*/
