@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -40,4 +41,65 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.container{
+	box-sizing: border-box;
+	width: 100vw;
+	margin: 0 auto;
+}
+main{
+	display: grid;
+	grid-template-areas: "side principal";
+	justify-content: center;
+	column-gap: 1vw;
+}
+.side{
+	grid: side;
+	border: 1px solid red;
+	width: 240px;
+	height: 100vh;
+}
+.principal{
+	grid: principal;
+	display: grid;
+	grid-template-areas: "content" "textmain" "figura";	
+	grid-template-rows: 350px 500px 300px;
+	justify-content: center;
+	border: 1px solid green;
+	width: 800px;
+	height: 100vh;
+}
+.mainContent{
+	grid: content;
+	display: grid;
+	grid-template-areas: "p p p p";
+	grid-template-columns:190px 190px 190px 190px;
+	margin: 0 5px;
+}
+.content{	
+	border: 1px solid yellow;
+	height: 150px;
+	font-size: 10em;
+	text-align: center;
+}
+.infoContent{
+	grid: p;
+	height: 100px;
+	border: 1px solid yellow;
+	text-align: center;
+	padding-top: 20px;
+	margin: 10px 0;
+}
+.textAbout{
+	grid: textmain;
+}
+.textAbout p{
+	width: 100%;
+	height: 200px;
+	border: 1px solid blue;
+}
+.imgMain{
+	grid: figura;
+	width: 780px;
 }
