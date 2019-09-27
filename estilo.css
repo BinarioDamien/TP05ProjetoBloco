@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -43,6 +44,18 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.container{
+	box-sizing: border-box;
+	width: 100vw;
+	margin: 0 auto;
+}
+main{
+	display: grid;
+	grid-template-areas: "side principal";
+	justify-content: center;
+	column-gap: 1vw;
 }
 
 
@@ -82,7 +95,8 @@ footer ul h3 {
 
 footer ul li a {
     text-decoration: none;
-    line-height: 18px;
+	line-height: 18px;
+	font-size: 11px;
 }
 
 
@@ -97,5 +111,5 @@ footer ul li a:hover {
 }
 
 .copy {
-    text-align: center
+	text-align: center
 }
