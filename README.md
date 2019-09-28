@@ -14,4 +14,4 @@
 #### Rodrigo Muniz
 - Criação da Main do HTML
 - Criação do CSS para as classes da Main
-- Criação do Powerpoint com ...?
+- Criação do Powerpoint com a prototipação
